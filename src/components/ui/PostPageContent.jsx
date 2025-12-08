@@ -1,0 +1,68 @@
+'use client'
+import BlogPost from "./BlogPost";
+import Footer from "./Footer";
+import Header from "./Header";
+import TopBar from "./TopBar";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import Head from "next/head";
+
+const PostPageContent = () => {
+  const pathname = usePathname();
+  const { data: posts, postLoading } = useSelector((state) => state.post);
+
+  const [post, setPost] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  const slug = pathname.split("/").pop();
+
+  useEffect(() => {
+    if (!slug || !isNaN(Number(slug))) {
+      window.location.href = "/invalid";
+      return;
+    }
+  }, [slug]);
+
+  useEffect(() => {
+    if (!postLoading && Array.isArray(posts) && posts.length > 0) {
+      const currentPost = posts.find(
+        (post) => post.slug?.toLowerCase() === slug
+      );
+      if (currentPost) {
+        setPost(currentPost);
+        setLoading(false);
+      } else {
+        window.location.href = '/'
+      }
+    }
+  }, [posts, postLoading, slug]);
+
+//   useEffect(() => {
+//     if (post?.title) {
+//       document.title = `${post.title} - YieldWitness: Finance & Tech Blog`;
+  
+//       const metaDesc = document.querySelector('meta[name="description"]');
+//       if (metaDesc) metaDesc.setAttribute("content", post.excerpt || "");
+//     }
+//   }, [post]);
+
+  return (
+    <>
+
+      <div className="font-sans bg-background text-foreground min-h-screen relative">
+
+        {/* Top utility bar */}
+        {/* <TopBar post={post} /> */}
+        {/* Navigation bar */}
+        <Header post={post} />
+        {/* Blog Post Content */}
+        <BlogPost post={post} loading={loading} posts={posts} />
+        {/* Footer */}
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default PostPageContent;
