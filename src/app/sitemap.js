@@ -11,7 +11,7 @@ export default async function sitemap() {
     const { posts } = data
 
     const postEntries = posts.map((post) => ({
-        url: `https://www.pixelmuse.art/post/${post.slug}`,
+        url: `https://pixelmuseart.vercel.app/post/${post.slug}`,
         lastModified: new Date(post.updatedAt),
         // changeFrequency: ,
         // priority: ,
@@ -19,23 +19,23 @@ export default async function sitemap() {
 
     return [
         {
-            url: `https://www.pixelmuse.art/`,
+            url: `https://pixelmuseart.vercel.app/`,
             lastModified: new Date()
         },
         {
-            url: `https://www.pixelmuse.art/about-us`,
+            url: `https://pixelmuseart.vercel.app/about-us`,
             lastModified: new Date()
         },
         {
-            url: `https://www.pixelmuse.art/contact-us`,
+            url: `https://pixelmuseart.vercel.app/contact-us`,
             lastModified: new Date()
         },
         {
-            url: `https://www.pixelmuse.art/privacy-policy`,
+            url: `https://pixelmuseart.vercel.app/privacy-policy`,
             lastModified: new Date()
         },
         {
-            url: `https://www.pixelmuse.art/terms-of-use`,
+            url: `https://pixelmuseart.vercel.app/terms-of-use`,
             lastModified: new Date()
         },
         ...postEntries,
