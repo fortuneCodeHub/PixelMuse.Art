@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
     title: "Privacy Policy - PixelMuse: Art & Design Blog",
     description:
-      "Read the PixelMuse Privacy Policy to understand how we collect, use, and protect your data across our finance, technology, insurance, and law articles.",
+      "Read the PixelMuse Privacy Policy to understand how we collect, use, and protect your data across our arts & design articles.",
 };
 
 export default function PrivacyPolicyPage() {
