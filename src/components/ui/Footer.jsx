@@ -23,9 +23,7 @@ const Footer = () => {
 
           <h3 className="text-gray-900 font-semibold text-lg mb-3">About</h3>
           <p className="text-sm leading-relaxed text-gray-600">
-            A modern publication covering Finance & Tech news,  
-            simplified insights, and practical guides for everyday readers 
-            looking to level up financially.
+          PixelMuse is a vibrant art and design publication exploring digital art, illustration, photography, graphic design, UI/UX, visual culture, and creative inspiration. Discover tutorials, artist highlights, trend reports, and beautifully crafted stories for creators of all levels.
           </p>
         </div>
 
