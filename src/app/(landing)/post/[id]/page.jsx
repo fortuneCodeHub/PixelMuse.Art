@@ -83,17 +83,17 @@ const PostPage = async ({ params }) => {
     author: {
       "@type": "Developer",
       "name": "Fortune",
-      url: "https://www.yieldnvest.com/",
+      url: "https://www.pixelmuse.art/",
     },
     publisher: {
       "@type": "Self-employed",
-      "name": "yieldInvest",
+      "name": "PixelMuseArt",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.yieldnvest.com/opengraph-image.png",
+        "url": "https://www.pixelmuse.art/opengraph-image.png",
       },
     },
-    url: `https://www.yieldnvest.com/post/${post._id}`,
+    url: `https://www.pixelmuse.art/post/${post._id}`,
   };
 
   return (
