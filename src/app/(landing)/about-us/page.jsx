@@ -4,16 +4,17 @@ import TopBar from "@/components/ui/TopBar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us - PixelMuse: Art & Design Blog",
+  title: "About PixelMuse — Photography, Art & Design Inspiration",
   description:
-    "Learn about PixelMuse — a creative blog dedicated to art, design, and digital inspiration. Our mission is to inspire and educate artists and designers worldwide.",
+    "Discover PixelMuse, a creative platform dedicated to photography, art, and design. Learn about our mission to inspire visual storytellers, designers, and creative thinkers.",
 };
+
   
 export default function AboutPage() {
     return (
       <>
         {/* Top utility bar */}
-        {/* <TopBar /> */}
+        <TopBar />
         {/* Navigation bar */}
         <Header />
         {/* <section className="max-w-5xl mx-auto px-6 py-20 text-gray-800">
@@ -88,39 +89,46 @@ export default function AboutPage() {
             </Link>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto text-center">
-            Your creative window into the world of art, design, and digital expression.
+            Your creative window into photography, art, and visual design.
           </p>
         </div>
 
         <div className="space-y-10 text-lg leading-relaxed text-center">
           <p>
-            <strong>PixelMuse</strong> is more than a blog — it’s a hub for artists, designers, 
-            and creatives seeking inspiration, techniques, and insight. We cover everything from 
-            <span className="font-semibold text-[#F97316]"> digital art, illustration, to graphic design</span>, 
-            helping you stay inspired and informed.
+            <strong>PixelMuse</strong> is more than a blog — it’s a creative space for
+            photographers, artists, designers, and visual storytellers. We explore the
+            ideas, techniques, and inspirations behind compelling visual work across
+            <span className="font-semibold text-[#F97316]">
+              {" "}photography, digital art, illustration, and design.
+            </span>
           </p>
 
           <p>
-            Our mission is simple: to connect creative minds with ideas and tools that empower their work. 
-            Whether exploring modern art trends, sharing digital design tutorials, or highlighting inspiring artists, 
-            PixelMuse brings depth and clarity to every story.
+            Our mission is simple: to inspire creativity and help visual thinkers grow.
+            From photography guides and composition tips to design trends and artistic
+            workflows, PixelMuse delivers thoughtful content that supports both beginners
+            and experienced creatives.
           </p>
 
           <div className="border-l-4 border-[#F97316] pl-6 italic text-gray-700">
-            “At PixelMuse, creativity should be celebrated, shared, and accessible. Every post is crafted to inspire, teach, and spark your imagination.”
+            “At PixelMuse, creativity is a language. Every article is crafted to spark
+            ideas, refine skills, and celebrate visual expression.”
           </div>
 
           <p>
-            Founded by passionate designers and digital creators, PixelMuse merges art, design, and storytelling 
-            into a platform that feels personal and professional. Our readers include illustrators, graphic designers, 
-            art enthusiasts, and anyone curious about the creative world.
+            Founded by creators with a strong digital background, PixelMuse blends
+            artistic storytelling with modern tools and design thinking. Our audience
+            includes photographers, graphic designers, digital artists, and anyone
+            passionate about visual culture.
           </p>
 
           <p>
-            We constantly evolve, driven by creativity and guided by inspiration. If you share our passion for art and design, 
-            we invite you to explore our latest posts and join the PixelMuse community.
+            We continue to evolve with the creative world. If you’re inspired by images,
+            design, and artistic expression, we invite you to explore PixelMuse and grow
+            with our creative community.
           </p>
         </div>
+
 
         <div className="mt-16 text-center">
           <a
@@ -165,81 +173,70 @@ export default function AboutPage() {
               {/* Author Text */}
               <div className="md:w-2/3 space-y-6 text-lg leading-relaxed">
                 <p>
-                  <strong>Peter Mark</strong> is the Chief Editor of YieldInvest.com — guiding the 
-                  platform’s editorial vision with deep expertise in web technologies, AI systems, 
-                  and fintech innovations. His goal is simple: deliver precise, technology-centered 
-                  insights across personal finance, insurance, and digital banking.
+                  <strong>Peter Mark</strong> is the Chief Editor of PixelMuse, where he guides
+                  the platform’s creative direction across photography, art, and design. With a
+                  strong background in frontend development and digital systems, Peter brings a
+                  structured, visual-first approach to creative storytelling.
                 </p>
 
-                <h3 className="text-2xl font-semibold mt-6">Professional Experience</h3>
                 <p>
-                  <strong>Frontend Developer – Notty Terminal</strong><br />
-                  Peter builds real-time trading dashboards and advanced algorithmic interfaces for 
-                  Notty Terminal, a next-generation web3 fintech company.
+                  His work focuses on visual composition, digital creativity, and how modern
+                  tools empower artists and designers to express ideas more effectively. At
+                  PixelMuse, his goal is to make creative knowledge accessible, practical, and
+                  inspiring for visual thinkers at every level.
                 </p>
+
+                <h3 className="text-2xl font-semibold mt-6">Creative & Professional Background</h3>
+
+                <p>
+                  <strong>Frontend Developer & Digital Creator</strong><br />
+                  Peter designs and builds modern web interfaces, visual dashboards, and
+                  creative digital experiences. His technical expertise informs PixelMuse’s
+                  design-driven perspective on photography, visual storytelling, and creative
+                  workflows.
+                </p>
+
                 <p className="text-sm text-gray-600">
                   Twitter/X:{" "}
-                  <a className="text-blue-600 underline break-all inline-block" href="https://x.com/Nottytmn?s=09" target="_blank">
+                  <a
+                    className="text-blue-600 underline break-all inline-block"
+                    href="https://x.com/Nottytmn?s=09"
+                    target="_blank"
+                  >
                     https://x.com/Nottytmn?s=09
-                  </a>
-                  <br />
-                  Colosseum Project Page:{" "}
-                  <a className="text-blue-600 underlinebreak-all inline-block" href="https://arena.colosseum.org/projects/explore/notty-terminal" target="_blank">
-                    Notty Terminal on Colosseum
                   </a>
                 </p>
 
                 <p>
-                  <strong>Chief Editor – YieldInvest.com</strong><br />
-                  Peter leads the content strategy, ensuring every financial or insurance topic is 
-                  accurate, trustworthy, and beginner-friendly — while being grounded in real fintech 
-                  industry experience.
+                  <strong>Chief Editor – PixelMuse</strong><br />
+                  Peter oversees editorial standards, visual direction, and content quality,
+                  ensuring that every article aligns with the creative values of photography,
+                  art, and design.
                 </p>
 
-                <h3 className="text-2xl font-semibold mt-6">Education & Certifications</h3>
-                {/* <h3 className="text-2xl font-semibold mt-6">Education & Certifications</h3> */}
+
+                <h3 className="text-2xl font-semibold mt-6">Education & Creative Skills</h3>
+
                 <ul className="list-disc ml-5 space-y-3 text-gray-700">
-
                   <li>
-                    freeCodeCamp – Responsive Web Design (2025) <br />
+                    freeCodeCamp – Responsive Web Design (2025)<br />
                     <a href="https://www.freecodecamp.org/learn/responsive-web-design-v9" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://www.freecodecamp.org/learn/responsive-web-design-v9</a>
+                      className="text-blue-600 underline break-all inline-block">
+                      https://www.freecodecamp.org/learn/responsive-web-design-v9
+                    </a>
                   </li>
 
                   <li>
-                    UniAthena – Basics of Risk Management in Insurance Sector <br />
-                    <a href="https://uniathena.com/short-courses/basics-of-risk-management-in-insurance-sector" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://uniathena.com/short-courses/basics-of-risk-management-in-insurance-sector</a>
-                  </li>
-
-                  <li>
-                    Alison – Diploma in Risk Management <br />
-                    <a href="https://alison.com/topic/learn/70676/learning-outcomes" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://alison.com/topic/learn/70676/learning-outcomes</a>
-                  </li>
-
-                  <li>
-                    Alison – Property & Liability Risk <br />
-                    <a href="https://alison.com/topic/learn/75434/learning-outcomes" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://alison.com/topic/learn/75434/learning-outcomes</a>
-                  </li>
-
-                  <li>
-                    freeCodeCamp – Frontend Development Libraries <br />
+                    freeCodeCamp – Frontend Development Libraries<br />
                     <a href="https://www.freecodecamp.org/learn/front-end-development-libraries-v9/" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://www.freecodecamp.org/learn/front-end-development-libraries-v9/</a>
+                      className="text-blue-600 underline break-all inline-block">
+                      https://www.freecodecamp.org/learn/front-end-development-libraries-v9/
+                    </a>
                   </li>
 
                   <li>
-                    Alison – AI in Personal Finance and Investments <br />
-                    <a href="https://alison.com/topic/learn/158327/learning-outcomes" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://alison.com/topic/learn/158327/learning-outcomes</a>
-                  </li>
-
-                  <li>
-                    Alison – Professional Personal Finance Advisor <br />
-                    <a href="https://alison.com/topic/learn/158327/learning-outcomes" target="_blank"
-                      className="text-blue-600 underline break-all inline-block">https://alison.com/topic/learn/158327/learning-outcomes</a>
+                    Ongoing learning in visual design systems, digital composition, and creative
+                    UI/UX workflows.
                   </li>
                 </ul>
 
@@ -257,10 +254,11 @@ export default function AboutPage() {
                 </ul>
 
                 <p className="text-sm text-gray-500 border-t pt-4">
-                  <strong>Disclaimer:</strong> All material is for educational purposes only. 
-                  Nothing here constitutes personalized financial or insurance advice. 
-                  Consult certified professionals for specific guidance.
+                  <strong>Disclaimer:</strong> All content on PixelMuse is for educational and
+                  inspirational purposes only. Articles reflect creative opinions and personal
+                  experience and do not constitute professional or commercial design advice.
                 </p>
+
               </div>
             </div>
           </div>

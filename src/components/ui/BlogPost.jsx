@@ -15,18 +15,14 @@ const BlogPost = ({ post, loading, posts }) => {
     // console.log(post);
   // }, [post])
 
-  function categoryBadgeClass(category) {
-    switch (category?.toLowerCase()) {
-      case "finance":
-        return "bg-[#0EA5A4]";
-      case "tech":
-        return "bg-[#2563EB]";
-      case "insurance":
+  function categoryBadgeClass(category = "") {
+    switch (category.toLowerCase()) {
+      case "art-design":
         return "bg-yellow-500";
-      case "law":
+      case "photography":
         return "bg-purple-600";
       default:
-        return "bg-gray-500";
+        return "bg-gray-400";
     }
   }
 

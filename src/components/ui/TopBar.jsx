@@ -35,27 +35,27 @@ export default function TopBar({ post }) {
           {/* Right: date + links */}
           <div className="flex items-center lg:gap-4 gap-2">
             <span className="hidden sm:block">{date}</span>
-            {/* <a href="/access" className="hover:text-[#0EA5A4]">
+            {/* <a href="/access" className="hover:text-[#F97316]">
               Access
             </a> */}
             {/* <a
               href={ post ? `/post/${post?.slug}` : '/'}
-              className="text-[#0EA5A4] font-medium hover:underline"
+              className="text-[#F97316] font-medium hover:underline"
             >
               Latest Post
             </a> */}
-            {/* <a href="/about-us" className="hover:text-[#0EA5A4]">
+            <a href="/about-us" className="hover:text-[#F97316]">
               About Us
             </a>
-            <a href="/contact-us" className="hover:text-[#0EA5A4]">
+            <a href="/contact-us" className="hover:text-[#F97316]">
               Contact Us
             </a>
-            <a href="/privacy-policy" className="hover:text-[#0EA5A4]">
+            <a href="/privacy-policy" className="hover:text-[#F97316]">
               Privacy Policy
             </a>
-            <a href="/terms-of-use" className="hover:text-[#0EA5A4]">
+            <a href="/terms-of-use" className="hover:text-[#F97316]">
               Terms Of Use
-            </a> */}
+            </a>
           </div>
         </div>
       </div>

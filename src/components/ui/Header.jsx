@@ -22,10 +22,8 @@ export default function Header({ post }) {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "/about-us" },
-    { name: "Contact", href: "/contact-us" },
-    { name: "Terms", href: "/terms-of-use" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Arts & Designs", href: "/art-design" },
+    { name: "Photography", href: "/photography" },
     // { name: "Law", href: "/law" },
     // { name: "Markets", href: "/markets" },
   ];

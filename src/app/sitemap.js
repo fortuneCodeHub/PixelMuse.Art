@@ -23,6 +23,14 @@ export default async function sitemap() {
             lastModified: new Date()
         },
         {
+            url: `https://pixelmuseart.vercel.app/art-design`,
+            lastModified: new Date()
+        },
+        {
+            url: `https://pixelmuseart.vercel.app/photography`,
+            lastModified: new Date()
+        },
+        {
             url: `https://pixelmuseart.vercel.app/about-us`,
             lastModified: new Date()
         },

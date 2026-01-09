@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Head from "next/head";
 
-const PostPageContent = () => {
+const PostPageContent = ({ pagePost }) => {
   const pathname = usePathname();
   const { data: posts, postLoading } = useSelector((state) => state.post);
 
@@ -25,18 +25,25 @@ const PostPageContent = () => {
   }, [slug]);
 
   useEffect(() => {
-    if (!postLoading && Array.isArray(posts) && posts.length > 0) {
-      const currentPost = posts.find(
-        (post) => post.slug?.toLowerCase() === slug
-      );
-      if (currentPost) {
-        setPost(currentPost);
+    setTimeout(() => {
+        setPost(pagePost);
         setLoading(false);
-      } else {
-        window.location.href = '/'
-      }
-    }
-  }, [posts, postLoading, slug]);
+    }, 3000);
+  }, [slug]);
+
+  // useEffect(() => {
+  //   if (!postLoading && Array.isArray(posts) && posts.length > 0) {
+  //     const currentPost = posts.find(
+  //       (post) => post.slug?.toLowerCase() === slug
+  //     );
+  //     if (currentPost) {
+  //       setPost(currentPost);
+  //       setLoading(false);
+  //     } else {
+  //       window.location.href = '/'
+  //     }
+  //   }
+  // }, [posts, postLoading, slug]);
 
 //   useEffect(() => {
 //     if (post?.title) {
@@ -53,7 +60,7 @@ const PostPageContent = () => {
       <div className="font-sans bg-background text-foreground min-h-screen relative">
 
         {/* Top utility bar */}
-        {/* <TopBar post={post} /> */}
+        <TopBar />
         {/* Navigation bar */}
         <Header post={post} />
         {/* Blog Post Content */}

@@ -70,7 +70,7 @@ const Home = () => {
       </div> */}
 
       {/* Top utility bar */}
-      {/* <TopBar post={heroPosts[0]} /> */}
+      <TopBar />
       {/* Navigation bar */}
       <Header post={heroPosts[0]} />
       {/* Hero section */}

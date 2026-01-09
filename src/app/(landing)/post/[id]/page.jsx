@@ -1,76 +1,80 @@
+import { getPostById } from "@/components/helpers/getPost";
 import PostPageContent from "@/components/ui/PostPageContent";
 import Head from "next/head";
 // import Script from "next/script";
 import { headers } from "next/headers";
 
 export async function generateMetadata({ params }) {
-  const postId = await params;
-  const headersList = await headers();
-  const host = headersList.get("host");
-  const protocol = process.env.NODE_ENV === "production" ? "https" : "http";
-  const baseUrl = `${protocol}://${host}`;
+  try {
+    const postId = await params;
+    
+    const post = await getPostById(postId.id)
 
-  const response = await fetch(`https://www.yieldnvest.com/api/auth/posts/${postId.id}`);
-  const data = await response.json();
-  const { post } = data
-  // console.log(post);
-  
+    // console.log("this is the post data", post)
 
-  return {
-    title: post.title,
-    description: post.excerpt,
-    keywords: post.keywords || [
-      "art and design blog",
-      "creative inspiration",
-      "modern art trends",
-      "digital art tutorials",
-      "graphic design tips",
-      "UI UX design ideas",
-      "visual storytelling",
-      "illustration techniques",
-      "contemporary artists",
-      "minimalist design style",
-      "brand identity design",
-      "color theory guide",
-      "design psychology",
-      "creative process insights",
-      "photography inspiration",
-      "art portfolio tips",
-      "aesthetic design trends",
-      "creative lifestyle blog",
-      "art techniques for beginners",
-      "how to become a digital artist",
-      "creative workflow tools",
-      "design resources for creators",
-      "inspiration for designers",
-      "creative entrepreneurship",
-      "art & design tutorials",
-      "digital illustration workflow"
-    ],
-    openGraph: {
-      images: [
-        { 
-          url: post.thumbnail,
-        }
+    if (!post) throw new Error("Post not found");
+
+    return {
+      title: post.title,
+      description: post.excerpt,
+      keywords: post.keywords || [
+        "PixelMuse",
+        "photography and art blog",
+        "art and design inspiration",
+        "creative photography",
+        "visual storytelling",
+        "digital art tutorials",
+        "graphic design ideas",
+        "UI UX design inspiration",
+        "illustration techniques",
+        "contemporary art trends",
+        "artist spotlights",
+        "creative process",
+        "aesthetic design",
+        "visual culture",
+        "design principles",
+        "color theory in design",
+        "composition techniques",
+        "photography tips",
+        "art portfolio guidance",
+        "creative workflows",
+        "design resources for creatives",
+        "inspiration for artists",
+        "modern design trends",
+        "creative tools",
+        "art and design tutorials",
+        "digital illustration workflow"
       ],
-    },
-  };
+
+      openGraph: {
+        images: [
+          { 
+            url: post.thumbnail,
+          }
+        ],
+      },
+    };
+    
+  } catch (err) {
+    console.error("Metadata error:", err);
+
+    return {
+      title: "Post not found | PixelMuse",
+      description: "This post is unavailable.",
+    };
+  }
+  
 }
 
 
 const PostPage = async ({ params }) => {
 
-  // Fetch post data again (you could also pass it from generateMetadata)
-  const headersList = await headers();
-  const host = headersList.get("host");
-  const protocol = process.env.NODE_ENV === "production" ? "https" : "http";
-  const baseUrl = `${protocol}://${host}`;
-
   const { id } = await params
 
-  const response = await fetch(`https://www.yieldnvest.com/api/auth/posts/${id}`);
-  const data = await response.json();
-  const { post } = data;
+  const post = await getPostById(id)
+
+  // console.log(post);
+  
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -105,7 +109,7 @@ const PostPage = async ({ params }) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       {/* </Head> */}
-      <PostPageContent />
+      <PostPageContent pagePost={post} />
     </>
   );
 };

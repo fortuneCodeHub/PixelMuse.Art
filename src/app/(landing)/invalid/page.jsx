@@ -9,7 +9,7 @@ const Invalid = () => {
         <div className="font-sans bg-background text-foreground min-h-screen relative">
 
             {/* Top utility bar */}
-            {/* <TopBar /> */}
+            <TopBar />
             {/* Navigation bar */}
             <Header />
 

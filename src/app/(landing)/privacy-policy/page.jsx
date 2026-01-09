@@ -4,16 +4,17 @@ import TopBar from "@/components/ui/TopBar";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Privacy Policy - PixelMuse: Art & Design Blog",
-    description:
-      "Read the PixelMuse Privacy Policy to understand how we collect, use, and protect your data across our arts & design articles.",
+  title: "Privacy Policy — PixelMuse | Photography, Art & Design",
+  description:
+    "Learn how PixelMuse collects, uses, and protects your personal information while you explore our photography, art, and design content.",
 };
+
 
 export default function PrivacyPolicyPage() {
     return (
         <>
             {/* Top utility bar */}
-            {/* <TopBar /> */}
+            <TopBar />
             {/* Navigation bar */}
             <Header />
 

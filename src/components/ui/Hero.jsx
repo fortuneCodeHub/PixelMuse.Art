@@ -43,6 +43,18 @@ export default function Hero({ posts, loading }) {
 
                   {/* Text overlay */}
                   <div className="absolute bottom-0 p-6 text-white">
+
+                    <span
+                      className={`inline-block text-xs font-semibold px-2 py-1 rounded ${
+                          post.category === "art-design"
+                          ? "bg-yellow-500"
+                          : post.category === "photography"
+                          ? "bg-purple-600"
+                          : "bg-gray-600"
+                      }`}
+                    >
+                        {post?.category === "finance" ? "personal-finance" : post.category}
+                    </span>
                     
                     <h2 className="text-2xl md:text-3xl font-extrabold leading-tight drop-shadow-lg">
                       {truncateText(post.title, 70)}

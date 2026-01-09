@@ -14,13 +14,9 @@ const RowFeed = ({ feedName, posts = [], popularPosts = [], loading }) => {
 
   function categoryBadgeClass(category = "") {
     switch (category.toLowerCase()) {
-      case "finance":
-        return "bg-[#0EA5A4]";
-      case "tech":
-        return "bg-[#2563EB]";
-      case "insurance":
+      case "art-design":
         return "bg-yellow-500";
-      case "law":
+      case "photography":
         return "bg-purple-600";
       default:
         return "bg-gray-400";
@@ -101,7 +97,7 @@ const RowFeed = ({ feedName, posts = [], popularPosts = [], loading }) => {
                   {/* CONTENT */}
                   <div className="p-5 flex flex-col justify-between md:w-2/3">
                     <div>
-                      {/* <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between">
                         <span
                           className={`text-xs font-semibold px-2 py-1 rounded text-white ${categoryBadgeClass(
                             post.category
@@ -110,12 +106,12 @@ const RowFeed = ({ feedName, posts = [], popularPosts = [], loading }) => {
                           {post?.category === "finance" ? "personal-finance" : post.category}
                         </span>
 
-                        {post.sponsored && (
+                        {/* {post.sponsored && (
                           <span className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-700">
                             Sponsored
                           </span>
-                        )}
-                      </div> */}
+                        )} */}
+                      </div>
 
                       <h3 className="mt-3 text-lg font-semibold text-slate-900 leading-tight">
                         {truncateText(post.title, 55)}

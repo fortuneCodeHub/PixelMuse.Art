@@ -61,7 +61,7 @@ export default function ContactPageContent() {
   return (
     <>
         {/* Top utility bar */}
-        {/* <TopBar /> */}
+        <TopBar />
         {/* Navigation bar */}
         <Header />
 

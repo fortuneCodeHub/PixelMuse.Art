@@ -20,36 +20,39 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL("https://www.pixelmuse.art/"),
+
   title: {
-    default: "PixelMuse — Art, Design & Creative Inspiration",
-    template: "%s — PixelMuse: Art & Design Blog"
+    default: "PixelMuse — Photography, Art & Design Inspiration",
+    template: "%s — PixelMuse: Photography, Art & Design"
   },
+
   description:
-    "PixelMuse is a vibrant art and design publication exploring digital art, illustration, photography, graphic design, UI/UX, visual culture, and creative inspiration. Discover tutorials, artist highlights, trend reports, and beautifully crafted stories for creators of all levels.",
+    "PixelMuse is a creative publication dedicated to photography, art, and design. We explore visual storytelling through photography, digital art, illustration, graphic design, UI/UX, and contemporary visual culture — featuring tutorials, artist spotlights, and creative inspiration for all levels.",
+
   keywords: [
     "PixelMuse",
-    "art and design blog",
-    "digital art inspiration",
-    "graphic design tutorials",
-    "UI UX design",
-    "visual storytelling",
-    "illustration techniques",
-    "modern art trends",
+    "photography and art blog",
+    "art and design inspiration",
     "photography inspiration",
-    "creative process",
+    "visual storytelling",
+    "digital art tutorials",
+    "graphic design ideas",
+    "UI UX design inspiration",
+    "illustration techniques",
+    "contemporary art trends",
+    "creative photography",
     "aesthetic design",
-    "brand identity design",
-    "digital illustration",
-    "creative lifestyle blog",
+    "visual culture",
+    "creative process",
     "design resources",
     "art tutorials",
     "creative inspiration"
   ],
 
   openGraph: {
-    title: "PixelMuse — Art, Design & Creative Inspiration",
+    title: "PixelMuse — Photography, Art & Design Inspiration",
     description:
-      "Explore PixelMuse, a modern art and design blog featuring digital art tutorials, creative tools, aesthetic inspiration, artist stories, and visual design trends. A home for creators who love beauty and imagination.",
+      "Explore PixelMuse, a modern creative platform for photography, art, and design. Discover visual storytelling, photography guides, digital art tutorials, artist features, and inspiring creative ideas.",
     url: "https://www.pixelmuse.art/",
     siteName: "PixelMuse",
     images: [
@@ -57,7 +60,7 @@ export const metadata = {
         // url: "/assets/pixelmuse-preview.png",
         width: 1200,
         height: 630,
-        alt: "PixelMuse — Art & Design Blog"
+        alt: "PixelMuse — Photography, Art & Design"
       }
     ],
     locale: "en_US",
@@ -66,9 +69,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "PixelMuse — Art, Design & Creative Inspiration",
+    title: "PixelMuse — Photography, Art & Design Inspiration",
     description:
-      "PixelMuse is a creative hub for designers, illustrators, and visual storytellers. Discover tutorials, inspiration, aesthetic trends, and artist insights.",
+      "PixelMuse is a creative hub for photographers, artists, and designers. Explore tutorials, visual inspiration, creative techniques, and artistic insights.",
     // images: ["/assets/pixelmuse-preview.png"],
     creator: "@pixelmuse"
   },

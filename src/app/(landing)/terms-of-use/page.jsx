@@ -8,17 +8,18 @@ import TopBar from "@/components/ui/TopBar";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Terms of Use - PixelMuse: Art & Design Blog",
-    description:
-      "Review the terms of use for PixelMuse. Learn about your rights, responsibilities, and the policies governing your use of our website and services.",
+  title: "Terms of Use — PixelMuse Photography, Art & Design",
+  description:
+    "Read PixelMuse’s terms of use to understand your rights and responsibilities when accessing our photography, art, and design content and services.",
 };
+
   
 
 export default function TermsOfUsePage() {
     return (
         <>
             {/* Top utility bar */}
-            {/* <TopBar /> */}
+            <TopBar />
             {/* Navigation bar */}
             <Header />  
 
