@@ -147,7 +147,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Chief Editor</h2>
             <p className="text-lg text-gray-600">
               The mind guiding <span className="font-semibold">PixelMuse</span> — also known as 
-              <span className="ms-2 font-semibold text-[#F97316]">“The Yield Witness.”</span>
+              <span className="ms-2 font-semibold text-[#F97316]">“The Muse.”</span>
             </p>
           </div>
 

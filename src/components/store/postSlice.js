@@ -31,7 +31,7 @@ export const getPosts = createAsyncThunk("posts/getPosts",
 export const getFrontendPosts = createAsyncThunk("posts/getPosts", 
     async (_, { rejectWithValue } ) => {
         try {
-            const res = await fetch('https://www.yieldnvest.com/api/auth/posts/art-design')
+            const res = await fetch('https://www.yieldnvest.com/api/auth/posts/pixelmuse')
 
             if (!res.ok) {
                 // maybe parse JSON safely
